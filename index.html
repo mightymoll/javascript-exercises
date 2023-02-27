@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MFV - JavaScript Exercises</title>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/nord.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="./exercises.js"></script>
+</head>
+
+<body>
+  <header className="header" style="text-align: center;">
+    <h1>JavaScript Exercises 💪</h1>
+    <p>from <a href="https://eloquentjavascript.net/">'Eloquent JavaScript 3rd Edition'</a> by Marijn Haverbeke</p>
+    <p>code snippets by Molly Felts Vallin</p>
+  </header>
+  <section>
+    <h2>Program Structure</h2>
+    <h3>2.1 Looping a triangle</h3>
+    <p>Write a loop that makes seven calls to console.log to output the following triangle:</p>
+    <pre>
+    #
+    ##
+    ###
+    ####
+    #####
+    ######
+    #######</pre>
+    </p>
+    <h4>my solution:</h4>
+    <pre><code style="max-width: min-content; padding:20px;">function triangle() {
+  for (let string = "#"; string.length <= 7; string += "#") {
+    console.log(string)
+    }
+  };
+    
+triangle();</code></pre>
+    <h4>official solution:</h4>
+    <pre><code style="max-width: min-content; padding:20px;">for (let line = "#"; line.length < 8; line += "#")
+      console.log(line);</code></pre>
+  </section>
+  <footer>
+    <p style="text-align: center;">
+      Copyright © 2023 Molly Felts Vallin
+    </p>
+  </footer>
+</body>
+</body>
+
+</html>
