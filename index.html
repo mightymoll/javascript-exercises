@@ -20,9 +20,10 @@
   </header>
   <section>
     <h2>Program Structure</h2>
-    <h3>2.1 Looping a triangle</h3>
-    <p>Write a loop that makes seven calls to console.log to output the following triangle:</p>
-    <pre>
+    <div className="exercise">
+      <h3>2.1 Looping a triangle</h3>
+      <p>Write a loop that makes seven calls to console.log to output the following triangle:</p>
+      <pre>
     #
     ##
     ###
@@ -30,26 +31,29 @@
     #####
     ######
     #######</pre>
-    </p>
-    <h4>my solution:</h4>
-    <pre><code style="max-width: min-content; padding:20px;">function triangle() {
+      </p>
+      <h4>my solution:</h4>
+      <pre><code style="max-width: min-content; padding:20px;">function triangle() {
   for (let string = "#"; string.length <= 7; string += "#") {
     console.log(string)
     }
   };
     
 triangle();</code></pre>
-    <h4>official solution:</h4>
-    <pre><code style="max-width: min-content; padding:20px;">for (let line = "#"; line.length < 8; line += "#")
+      <h4>official solution:</h4>
+      <pre><code style="max-width: min-content; padding:20px;">for (let line = "#"; line.length < 8; line += "#")
       console.log(line);</code></pre>
-    <h3>2.2 FizzBuzz</h3>
-    <p>Write a program that uses console.log to print all the numbers from 1 to 100 with two exceptions:
-      <br>1. for numbers divisible by 3, print 'Fizz'
-      <br>2. for numbers divisible by 5 (and not 3), print 'Buzz'
-      <br>then modify the program to print "FizzBuzz" for numbers that are both divisible by 3 and 5
-    </p>
-    <h4>my solution:</h4>
-    <pre><code style="max-width: min-content; padding:20px;">function fizzBuzz() {
+    </div>
+    <div className="exercise">
+      <h3>2.2 FizzBuzz</h3>
+      <p>Write a program that uses console.log to print all the numbers from 1 to 100 with two exceptions:
+        <br>1. for numbers divisible by 3, print 'Fizz'
+        <br>2. for numbers divisible by 5 (and not 3), print 'Buzz'
+      </p>
+      <p>> then modify the program to print "FizzBuzz" for numbers that are both divisible by 3 and 5
+      </p>
+      <h4>my solution:</h4>
+      <pre><code style="max-width: min-content; padding:20px;">function fizzBuzz() {
   for (let count = 1; count <= 100; count++) {
     if (count % 3 == 0) {
       console.log("Fizz")
@@ -63,8 +67,14 @@ triangle();</code></pre>
   }
 };
     
-fizzBuzz();
-</pre></code>
+fizzBuzz();</code></pre>
+      <h4>modification:</h4>
+      <p>add the following as the first 'if' statement to change numbers divisible by both 3 and 5:</p>
+      <pre><code style="max-width: min-content; padding:20px;">
+if ((count % 3 == 0) && (count % 5 == 0)) {
+  console.log("FizzBuzz")
+}</code></pre>
+      <div className="exercise">
   </section>
   <footer>
     <p style="text-align: center;">

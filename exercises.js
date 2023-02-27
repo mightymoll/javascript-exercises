@@ -37,5 +37,25 @@ function fizzBuzz() {
     }
   }
 };
-
 fizzBuzz();
+
+function fizzBuzzModified() {
+  for (let count = 1; count <= 100; count++) {
+    // print "FizzBuzz" if remainder is 0 when divided by 3 and 5
+    if ((count % 3 == 0) && (count % 5 == 0)) {
+      console.log("FizzBuzz")
+    }
+    // print "Fizz" if remainder is 0 when divided by 3
+    else if (count % 3 == 0) {
+      console.log("Fizz")
+    }
+    // print "Buzz" if remainder is 0 when divided by 5
+    else if (count % 5 == 0) {
+      console.log("Buzz")
+    }
+    else {
+      console.log(count)
+    }
+  }
+};
+fizzBuzzModified();
