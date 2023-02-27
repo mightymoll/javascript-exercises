@@ -59,3 +59,23 @@ function fizzBuzzModified() {
   }
 };
 fizzBuzzModified();
+
+/* EXERCISE 3 - Chessboard
+Write a program that creates a string representing an 8x8 grid,
+using newline characters to separate lines. At each position of the grid there is either a space or a #.
+the characters should form a chessboard. */
+
+function chessboard() {
+  let rowSize = 8;
+  for (let n = 1; n <= (rowSize ** 2); n++) {
+    let output = " "
+    if (n % 2 == 0) {
+      output = "#";
+    }
+    if (n % rowSize == 0) {
+      output += "/n";
+    }
+    console.log(output)
+  }
+};
+chessboard();

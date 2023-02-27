@@ -1,5 +1,5 @@
 {
-  "name": "Eloquent Javascript Exercises",
+  "name": "eloquent-javascript-exercises",
   "version": "1.0.0",
   "description": "code solutions by Molly Felts Vallin",
   "main": "exercises.js",
@@ -7,7 +7,6 @@
   "private": false,
   "dependencies": {
     "highlight.js": "^11.7.0",
-    "install": "^0.13.0",
-    "nodejs": "^0.0.0"
+    "node.js": "^0.0.1-security"
   }
 }
