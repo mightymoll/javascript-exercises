@@ -12,3 +12,30 @@ function triangle() {
 };
 
 triangle();
+
+/* EXERCISE 2 - FizzBuzz
+write a program that uses console.log to print all the numbers from 1 to 100
+two exceptions: 
+1. for numbers divisible by 3, print 'Fizz'
+2. for numbers divisible by 5 (and not 3), print 'Buzz'
+
+then modify the program to print "FizzBuzz" for numbers that are both divisible by 3 and 5 */
+
+function fizzBuzz() {
+  for (let count = 1; count <= 100; count++) {
+    // print "Fizz" if remainder is 0 when divided by 3
+    if (count % 3 == 0) {
+      console.log("Fizz")
+    }
+    // print "Buzz" if remainder is 0 when divided by 5
+    else if (count % 5 == 0) {
+      console.log("Buzz")
+    }
+    // print number if neither case above is true
+    else {
+      console.log(count)
+    }
+  }
+};
+
+fizzBuzz();
