@@ -65,17 +65,21 @@ Write a program that creates a string representing an 8x8 grid,
 using newline characters to separate lines. At each position of the grid there is either a space or a #.
 the characters should form a chessboard. */
 
+// this got weird but it worked!
+/* Process:
+1. define 'size' of chessboard, this will result in an 8x8
+2. run loop for # of times equal to chessboard 'size' to get different 'rows'
+3. first and non-even rows will print " #" repeated by the 'size' divided by 2 (in this case 4 times)
+4. if row is even then opposite is printed "# "
+*/
+
 function chessboard() {
-  let rowSize = 8;
-  for (let n = 1; n <= (rowSize ** 2); n++) {
-    let output = " "
-    if (n % 2 == 0) {
-      output = "#";
-    }
-    if (n % rowSize == 0) {
-      output += "/n";
-    }
-    console.log(output)
+  let size = 8;
+  for (let n = 1; n <= size; n++) {
+    let output = " #".repeat(size / 2);
+    if (n % 2 == 0) output = "# ".repeat(size / 2);
+    console.log(output);
   }
 };
+
 chessboard();
