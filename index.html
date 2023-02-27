@@ -74,7 +74,15 @@ fizzBuzz();</code></pre>
 if ((count % 3 == 0) && (count % 5 == 0)) {
   console.log("FizzBuzz")
 }</code></pre>
-      <div className="exercise">
+      <h4>official solution:</h4>
+      <pre><code style="max-width: min-content; padding:20px;">for (let n = 1; n <= 100; n++) {
+  let output = "";
+  if (n % 3 == 0) output += "Fizz";
+  if (n % 5 == 0) output += "Buzz";
+  console.log(output || n);
+}</code></pre>
+      <p>comments: my solution was a bit long-winded; will keep their syntax in mind for future exercises</p>
+    </div>
   </section>
   <footer>
     <p style="text-align: center;">
