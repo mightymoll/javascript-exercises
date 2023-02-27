@@ -97,6 +97,25 @@ if ((count % 3 == 0) && (count % 5 == 0)) {
 };
       
 chessboard();</code></pre>
+      <h4>official solution:</h4>
+      <pre><code style="max-width: min-content; padding:20px;">let size = 8;
+  let board = "";
+  
+for (let y = 0; y < size; y++) {
+  for (let x = 0; x < size; x++) {
+    if ((x + y) % 2 == 0) {
+      board += " ";
+    } else {
+      board += "#";
+    }
+  }
+  board += "\n";
+}
+  
+console.log(board);</pre></code>
+      <p>comments: I find my code/language more easy-to-read in this particular situation but I didn't include
+        the \n linebreak in my solution</p>
+    </div>
   </section>
   <footer>
     <p style="text-align: center;">
