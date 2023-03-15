@@ -87,19 +87,19 @@ if ((count % 3 == 0) && (count % 5 == 0)) {
       <h3>2.3 Chessboard</h3>
       <p>Write a program that creates a string representing an 8x8 grid out of spaces and # characters</p>
       <h4>my solution:</h4>
-      <pre><code style="max-width: min-content; padding:20px;">function chessboard() {
-  let size = 8;
+      <pre><code style="max-width: min-content; padding:20px;">function chessboard(size) {
   for (let n = 1; n <= size; n++) {
     let output = " #".repeat(size / 2);
     if (n % 2 == 0) output = "# ".repeat(size / 2);
     console.log(output);
-  }
-};
-      
-chessboard();</code></pre>
+    }
+  };
+
+chessboard(8);
+</code></pre>
       <h4>official solution:</h4>
       <pre><code style="max-width: min-content; padding:20px;">let size = 8;
-  let board = "";
+let board = "";
   
 for (let y = 0; y < size; y++) {
   for (let x = 0; x < size; x++) {
@@ -111,11 +111,112 @@ for (let y = 0; y < size; y++) {
   }
   board += "\n";
 }
-  
-console.log(board);</pre></code>
+
+console.log(board);
+      </code></pre>
       <p>comments: I find my code/language more easy-to-read in this particular situation but I didn't include
         the \n linebreak in my solution</p>
     </div>
+    <div className="exercise">
+      <h3>3.1 Minimum</h3>
+      <p>Write a function min that takes two arguments and returns their minimum.</p>
+      <h4>my solution:</h4>
+      <pre><code style="max-width: min-content; padding:20px;">function minimum(a, b) {
+  return (Math.min(a, b))
+}
+      
+console.log(minimum(5, 10));
+</code></pre>
+      <h4>official solution:</h4>
+      <pre><code style="max-width: min-content; padding:20px;">function min(a, b) {
+  if (a < b) return a;
+  else return b;
+}
+</code></pre>
+    </div>
+    <div className="exercise">
+      <h3>3.2 Recursion</h3>
+      <p>Define a recursive function isEven corresponding to this description. The function should accept a single
+        parameter (a positive, whole number) and return a Boolean.
+      <ul>
+        <li>Zero is even.</li>
+        <li>One is odd.</li>
+        <li>For any other number N, its evenness is the same as N - 2.</li>
+      </ul>
+      </p>
+      <h4>my solution:</h4>
+      <pre><code style="max-width: min-content; padding:20px;">function isEven(number) {
+  if (number == 1 || number == -1) return false
+  if (number == 0) return true
+  else return isEven(number - 2)
+}
+      
+console.log(isEven(75))
+</code></pre>
+      <h4>official solution:</h4>
+      <pre><code style="max-width: min-content; padding:20px;">function isEven(n) {
+  if (n == 0) return true;
+  else if (n == 1) return false;
+  else if (n < 0) return isEven(-n);
+  else return isEven(n - 2);
+}
+</code></pre>
+    </div>
+  </section>
+  <div className="exercise">
+    <h3>3.3 Bean Counting</h3>
+    <p>You can get the Nth character, or letter, from a string by writing "string"[N]. The returned value will be a
+      string containing only one character (for example, "b"). The first character has position 0, which causes the last
+      one to be found at position string.length - 1. In other words, a two-character string has length 2, and its
+      characters have positions 0 and 1.</p>
+    <p>Write a function countBs that takes a string as its only argument and returns a number that indicates how many
+      uppercase “B” characters there are in the string.</p>
+    <p>Next, write a function called countChar that behaves like countBs, except it takes a second argument that
+      indicates the character that is to be counted (rather than counting only uppercase “B” characters). Rewrite
+      countBs to make use of this new function.</p>
+    <h4>my solution: part 1</h4>
+    <pre><code style="max-width: min-content; padding:20px;">function countBs(string) {
+  let numberOfBs = 0
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] == "B") {
+      numberOfBs++
+    }
+  }
+  return numberOfBs
+}
+</code></pre>
+    <h4>my solution: part 2</h4>
+    <pre><code style="max-width: min-content; padding:20px;">function countChar(string, character) {
+  let count = 0
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] == character) {
+      count++
+    }
+  }
+  return count
+}
+    </code></pre>
+    <h4>my solution: part 3</h4>
+    <pre><code style="max-width: min-content; padding:20px;">function countBs(string) {
+  return countChar(string, "B");
+}
+    </code></pre>
+    <h4>official solution:</h4>
+    <pre><code style="max-width: min-content; padding:20px;">function countChar(string, ch) {
+  let counted = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] == ch) {
+      counted += 1;
+    }
+  }
+return counted;
+}
+    
+function countBs(string) {
+  return countChar(string, "B");
+}
+</code></pre>
+  </div>
   </section>
   <footer>
     <p style="text-align: center;">
